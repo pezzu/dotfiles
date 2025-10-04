@@ -1,0 +1,57 @@
+[user]
+	name = Peter Sukhenko
+	email = 7243796+pezzu@users.noreply.github.com
+
+
+[alias]
+	ad = difftool --tool=araxis --dir-diff --no-prompt --no-symlinks
+	ads = difftool --tool=araxis --dir-diff --no-prompt --no-symlinks --staged
+	md = difftool --tool=meld --dir-diff --no-prompt
+	mds = difftool --tool=meld --dir-diff --no-prompt --staged
+	br = branch --sort=-committerdate
+	ci = commit
+	ca = commit --all
+	co = checkout
+	glog = log --all --pretty='format:%d %Cgreen%h%Creset %an - %s' --graph
+  lg = log --oneline --color --pretty=format:'%C(yellow)%h%Creset %ad %aN %s' --date=short
+	rb = rebase
+	st = status
+
+
+[core]
+	pager = less -F -X
+
+
+[credential]
+	helper = store
+
+
+# [diff]
+# 	tool = araxis
+
+[difftool]
+	prompt = false
+
+[difftool "meld"]
+	cmd = meld "$LOCAL" "$REMOTE"
+
+[difftool "vimdiff"]
+	cmd = nvim -d $LOCAL $BASE $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+
+[difftool "araxis"]
+	cmd = '/mnt/c/tools/bin/arx_wsl_git_compare' "$LOCAL" "$REMOTE"
+
+
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+
+
+[init]
+	defaultBranch = main
+
+
+[mailmap]
+  file = ~/.mailmap
