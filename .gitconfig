@@ -13,7 +13,7 @@
 	ca = commit --all
 	co = checkout
 	glog = log --all --pretty='format:%d %Cgreen%h%Creset %an - %s' --graph
-  lg = log --oneline --color --pretty=format:'%C(yellow)%h%Creset %ad %aN %s' --date=short
+  lg = log --oneline --color --pretty=format:'%C(yellow)%h %Cgreen%ad %C(blue)%<(6)%al%Creset %s' --date=short
 	rb = rebase
 	st = status
 
@@ -52,6 +52,3 @@
 [init]
 	defaultBranch = main
 
-
-[mailmap]
-  file = ~/.mailmap
