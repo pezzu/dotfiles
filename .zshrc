@@ -106,7 +106,7 @@ source $ZSH/oh-my-zsh.sh
 #
 
 alias mcp='~/go/bin/mcptools'
-alias config='git --git-dir=$HOME/.synch.git --work-tree=$HOME'
+alias dotfiles='git --git-dir=$HOME/.synch.git --work-tree=$HOME'
 alias zed='/mnt/c/Users/pesu/AppData/Local/Programs/Zed/bin/zed'
 
 export NVM_DIR="$HOME/.nvm"
@@ -122,11 +122,14 @@ export PATH=/home/pesu/.opencode/bin:$PATH
 export PATH=/home/pesu/maven/bin:$PATH
 export PATH=/home/pesu/arcanist/bin:$PATH
 
-
 # bun completions
-[ -s "/home/pesu/.bun/_bun" ] && source "/home/pesu/.bun/_bun"
+[ -s "~/.bun/_bun" ] && source "~/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH="$HOME/jdt-ls/bin:$PATH"
+
+# oracle
+export LD_LIBRARY_PATH=$HOME/oracle/instantclient_23_7:$LD_LIBRARY_PATH
+export PATH=$HOME/oracle/instantclient_23_7:$PATH
