@@ -105,9 +105,10 @@ source $ZSH/oh-my-zsh.sh
 #
 #
 
-alias mcp='~/go/bin/mcptools'
 alias dotfiles='git --git-dir=$HOME/.synch.git --work-tree=$HOME'
 alias zed='/mnt/c/Users/pesu/AppData/Local/Programs/Zed/bin/zed'
+alias rg='rg --hidden'
+alias tf='terraform'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
