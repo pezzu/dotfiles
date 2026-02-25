@@ -133,3 +133,5 @@ export PATH="$HOME/jdt-ls/bin:$PATH"
 # oracle
 export LD_LIBRARY_PATH=$HOME/oracle/instantclient_23_7:$LD_LIBRARY_PATH
 export PATH=$HOME/oracle/instantclient_23_7:$PATH
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
