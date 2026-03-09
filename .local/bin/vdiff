@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+/mnt/c/Users/pesu/Araxis/Araxis\ Merge/ConsoleCompare.exe "$@"
