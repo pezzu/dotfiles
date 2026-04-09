@@ -8,8 +8,10 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 # opencode
 export PATH=/home/pesu/.opencode/bin:$PATH
+
 export PATH=/home/pesu/maven/bin:$PATH
 export PATH=/home/pesu/arcanist/bin:$PATH
+export PATH="$HOME/jdt-ls/bin:$PATH"
 
 # bun completions
 [ -s "~/.bun/_bun" ] && source "~/.bun/_bun"
@@ -17,10 +19,10 @@ export PATH=/home/pesu/arcanist/bin:$PATH
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-export PATH="$HOME/jdt-ls/bin:$PATH"
 
 # oracle
 export LD_LIBRARY_PATH=$HOME/oracle/instantclient_23_7:$LD_LIBRARY_PATH
 export PATH=$HOME/oracle/instantclient_23_7:$PATH
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
+export PATH="$(brew --prefix rustup)/bin":$PATH
