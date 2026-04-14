@@ -4,8 +4,6 @@
 
 
 [alias]
-  ad = difftool --tool=araxis --dir-diff --no-prompt --no-symlinks
-  ads = difftool --tool=araxis --dir-diff --no-prompt --no-symlinks --staged
   md = difftool --tool=meld --dir-diff --no-prompt
   mds = difftool --tool=meld --dir-diff --no-prompt --staged
   br = branch --sort=-committerdate
@@ -27,20 +25,20 @@
   helper = store
 
 
-# [diff]
-#   tool = araxis
+[diff]
+  context = 10
+
 
 [difftool]
   prompt = false
 
+
 [difftool "meld"]
   cmd = meld "$LOCAL" "$REMOTE"
 
+
 [difftool "vimdiff"]
   cmd = nvim -d $LOCAL $BASE $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
-
-[difftool "araxis"]
-  cmd = '/mnt/c/tools/bin/arx_wsl_git_compare' "$BASE" "$LOCAL" "$REMOTE"
 
 
 [filter "lfs"]
@@ -52,6 +50,7 @@
 
 [init]
   defaultBranch = main
+
 
 [push]
   autoSetupRemote = true
