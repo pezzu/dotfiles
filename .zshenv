@@ -26,3 +26,6 @@ export PATH=$HOME/oracle/instantclient_23_7:$PATH
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
 export PATH="$(brew --prefix rustup)/bin":$PATH
+
+export PATH=$HOME/.cargo/bin:$PATH
+
