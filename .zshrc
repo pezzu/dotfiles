@@ -70,7 +70,7 @@ ZSH_THEME="amuse"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vi-mode)
+plugins=(git kubectl)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -109,3 +109,5 @@ alias dotfiles='git --git-dir=$HOME/.synch.git --work-tree=$HOME'
 alias zed='/mnt/c/Users/pesu/AppData/Local/Programs/Zed/bin/zed'
 alias rg='rg --hidden'
 alias tf='terraform'
+
+set -o vi
