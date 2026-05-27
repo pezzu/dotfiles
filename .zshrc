@@ -70,12 +70,25 @@ ZSH_THEME="amuse"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git kubectl)
+plugins=(git vi-mode kubectl)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
+function clipcopy() {
+  if [[ -n ${WAYLAND_DISPLAY:-} ]] && command -v wl-copy >/dev/null 2>&1; then
+    wl-copy < "${1:-/dev/stdin}"
+  else
+    clip.exe < "${1:-/dev/stdin}"
+  fi
+}
+function clippaste() {
+  if [[ -n ${WAYLAND_DISPLAY:-} ]] && command -v wl-paste >/dev/null 2>&1; then
+    wl-paste --no-newline | tr -d '\r'
+  else
+    powershell.exe -NoProfile -Command Get-Clipboard | tr -d '\r'
+  fi
+}
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -110,4 +123,3 @@ alias zed='/mnt/c/Users/pesu/AppData/Local/Programs/Zed/bin/zed'
 alias rg='rg --hidden'
 alias tf='terraform'
 
-set -o vi
