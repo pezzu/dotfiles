@@ -31,3 +31,6 @@ export PATH=$HOME/.cargo/bin:$PATH
 
 source <(fzf --zsh)
 
+eval "$(direnv hook zsh)"
+
+
