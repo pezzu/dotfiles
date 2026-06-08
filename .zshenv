@@ -29,3 +29,5 @@ export PATH="$(brew --prefix rustup)/bin":$PATH
 
 export PATH=$HOME/.cargo/bin:$PATH
 
+source <(fzf --zsh)
+
