@@ -2,6 +2,9 @@
   name = Peter Sukhenko
   email = 7243796+pezzu@users.noreply.github.com
 
+[includeIf "gitdir:~/work/"]
+  path  = ~/.gitconfig-work
+
 
 [alias]
   md = difftool --tool=meld --dir-diff --no-prompt
