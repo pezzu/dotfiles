@@ -33,4 +33,4 @@ source <(fzf --zsh)
 
 eval "$(direnv hook zsh)"
 
-
+eval "$(zoxide init zsh)"
