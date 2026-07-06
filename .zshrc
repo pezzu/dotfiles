@@ -122,4 +122,5 @@ alias dotfiles='git --git-dir=$HOME/.synch.git --work-tree=$HOME'
 alias zed='/mnt/c/Users/pesu/AppData/Local/Programs/Zed/bin/zed'
 alias rg='rg --hidden'
 alias tf='terraform'
+mcd() { mkdir -p "$1" && cd "$1"; }
 
