@@ -70,9 +70,17 @@ ZSH_THEME="amuse"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vi-mode kubectl)
+plugins=(git vi-mode kubectl kube-ps1)
+
+KUBE_PS1_PREFIX=''
+KUBE_PS1_SUFFIX=''
+KUBE_PS1_SYMBOL_ENABLE='false'
+KUBE_PS1_CTX_COLOR='blue'
+KUBE_PS1_NS_COLOR='blue'
 
 source $ZSH/oh-my-zsh.sh
+
+RPROMPT='$(kube_ps1)'
 
 # User configuration
 function clipcopy() {
@@ -122,5 +130,11 @@ alias dotfiles='git --git-dir=$HOME/.synch.git --work-tree=$HOME'
 alias zed='/mnt/c/Users/pesu/AppData/Local/Programs/Zed/bin/zed'
 alias rg='rg --hidden'
 alias tf='terraform'
+alias nv='nvim'
+alias oc='opencode'
 mcd() { mkdir -p "$1" && cd "$1"; }
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
