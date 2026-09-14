@@ -15,7 +15,7 @@ dotfiles config status.showUntrackedFiles no
 ## Restore Config
 
 ```
-git clone --separate-git-dir=$HOME/.synch.git $HOME
+git clone --separate-git-dir=$HOME/.synch.git https://github.com/pezzu/dotfiles.git
 ```
 
 ## Add Files
